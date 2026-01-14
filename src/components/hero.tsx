@@ -1,0 +1,21 @@
+const Hero = () => {
+    return (
+        <section className="flex items-center justify-center">
+            <div className="w-[90%] flex flex-col md:flex-row min-h-[80vh] items-center max-w-300">
+                <div className="order-1 md:order-0 w-full md:w-1/2 text-center md:text-start">
+                    <h2 className="text-lg font-semibold mb-1 mt-6 md:m-0">GeniaArte | Accesorios</h2>
+                    <h3 className="text-4xl font-semibold mb-4 md:mb-8">Cada producto es un lienzo en blanco.</h3>
+                    <a className="text-xl hover:text-[#58684f] underline font-semibold" href="#">Catalogo</a>
+                </div>
+                <div className="order-0 md:order-1 w-full md:w-1/2 flex justify-center">
+                    <img className="rounded-full size-96 md:size-120 object-cover" 
+                        src="VasoNocheEstrellada.jpg" 
+                        alt="Producto Vaso Noche Estrellada | GeniaArte"
+                    />
+                </div>
+            </div>
+        </section>
+    );
+}
+ 
+export default Hero;
