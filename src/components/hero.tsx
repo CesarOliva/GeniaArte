@@ -1,7 +1,7 @@
 const Hero = () => {
     return (
-        <section className="flex items-center justify-center">
-            <div className="w-[90%] flex flex-col md:flex-row min-h-[80vh] items-center max-w-300">
+        <section className="flex items-center justify-center mt-8 mb-16 md:mb-0">
+            <div className="w-[90%] flex flex-col md:flex-row md:min-h-[80vh] items-center justify-center max-w-300">
                 <div className="order-1 md:order-0 w-full md:w-1/2 text-center md:text-start">
                     <h2 className="text-lg font-semibold mb-1 mt-6 md:m-0">GeniaArte | Accesorios</h2>
                     <h3 className="text-4xl font-semibold mb-4 md:mb-8">Cada producto es un lienzo en blanco.</h3>
