@@ -1,18 +1,14 @@
-import Beneficios from "./components/beneficios"
-import Destacado from "./components/destacado"
-import Hero from "./components/hero"
-import Navbar from "./components/navbar"
-import Productos from "./components/productos"
+import { Route, Routes } from "react-router"
+import Layout from "./Layout"
+import HomePage from "./pages/Home"
 
 function App() {
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <Destacado/>
-      <Beneficios/>
-      <Productos/>
-    </>
+    <Routes>
+      <Route element={<Layout/>}>
+        <Route path="/" element={<HomePage/>}/>     
+      </Route>
+    </Routes>
   )
 }
 
