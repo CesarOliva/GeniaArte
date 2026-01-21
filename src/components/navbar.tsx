@@ -21,8 +21,13 @@ const Navbar = () => {
                     <Link to={'/Contacto'} className="cursor-pointer hover:text-[#58684f]">CONTACTO</Link>
                 </ul>
                 
-                <div className="flex gap-x-6 items-center">
-                    <Search className="size-6 text-neutral-500"/>
+                <div className="flex gap-8">
+                    <a target="_blank" href="#">
+                        <img className='size-8' src="/facebook.svg" alt="Facebook GeniaArte"/>
+                    </a>
+                    <a target="_blank" href="#">
+                        <img className='size-8' src="/instagram.svg" alt="Instagram GeniaArte"/>
+                    </a>
                 </div>
             </nav>
             {isOpen && (

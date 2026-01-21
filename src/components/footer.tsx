@@ -7,8 +7,12 @@ const Footer = () => {
                 <img src="/logo.webp" alt="Logo GeniaArte" className="h-12 mb-4"/>
                 <p className="text-black font-normal text-lg mb-8">Cada producto es un lienzo en blanco</p>
                 <div className="flex gap-8 mb-12">
-                    <img className='size-10' src="/facebook.svg" alt="Facebook GeniaArte"/>
-                    <img className='size-10' src="/instagram.svg" alt="Instagram GeniaArte"/>
+                    <a target="_blank" href="#">
+                        <img className='size-10' src="/facebook.svg" alt="Facebook GeniaArte"/>
+                    </a>
+                    <a target="_blank" href="#">
+                        <img className='size-10' src="/instagram.svg" alt="Instagram GeniaArte"/>
+                    </a>
                 </div>
                 <div className="flex flex-col md:flex-row gap-y-4 md:gap-y-0 w-full items-center justify-between mb-12">
                     <span className="text-lg">® GeniaArte 2026</span>
