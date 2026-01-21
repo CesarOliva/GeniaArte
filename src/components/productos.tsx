@@ -9,26 +9,34 @@ const Productos = () => {
                     <Link to={'/catalogo'} className="text-md font-semibold text-black px-4 py-2 border-2 border-black">VER TODOS</Link>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div className="flex flex-col">
-                        <img src="cojin-1.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
-                        <p className="text-lg font-semibold">Llavero Cojín</p>
-                        <span className="text-md">$50.00</span>
-                    </div>
-                    <div className="flex flex-col">
-                        <img src="cojin-2.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
-                        <p className="text-lg font-semibold">Llavero Cojín</p>
-                        <span className="text-md">$50.00</span>
-                    </div>
-                    <div className="flex flex-col">
-                        <img src="cojin-3.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
-                        <p className="text-lg font-semibold">Llavero Cojín</p>
-                        <span className="text-md">$50.00</span>
-                    </div>
-                    <div className="flex flex-col">
-                        <img src="cojin-4.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
-                        <p className="text-lg font-semibold">Llavero Cojín</p>
-                        <span className="text-md">$50.00</span>
-                    </div>
+                    <Link to="/Catalogo/cojin1">
+                        <div className="flex flex-col">
+                            <img className='rounded-lg' src="/cojin-1.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
+                            <p className="text-lg font-semibold">Llavero Cojín</p>
+                            <span className="text-md">$50.00</span>
+                        </div>
+                    </Link>
+                    <Link to="/Catalogo/cojin1">
+                        <div className="flex flex-col">
+                            <img className='rounded-lg' src="/cojin-2.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
+                            <p className="text-lg font-semibold">Llavero Cojín</p>
+                            <span className="text-md">$50.00</span>
+                        </div>
+                    </Link>
+                    <Link to="/Catalogo/cojin1">
+                        <div className="flex flex-col">
+                            <img className='rounded-lg' src="/cojin-3.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
+                            <p className="text-lg font-semibold">Llavero Cojín</p>
+                            <span className="text-md">$50.00</span>
+                        </div>
+                    </Link>
+                    <Link to="/Catalogo/cojin1">
+                        <div className="flex flex-col">
+                            <img className='rounded-lg' src="/cojin-4.jpg" alt="Produto GeniaArte - Llavero Cojin"/>
+                            <p className="text-lg font-semibold">Llavero Cojín</p>
+                            <span className="text-md">$50.00</span>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </section>
