@@ -1,6 +1,10 @@
+import { useQuery } from "convex/react";
 import { Link } from "react-router";
+import { api } from "../../convex/_generated/api";
 
 const CatalogoPage = () => {
+    const products = useQuery(api.products.getAllProducts);
+    
     return (
         <section className="flex items-center justify-center mt-8 mb-16">
             <div className="w-[90%] flex flex-col md:flex-row justify-between max-w-300">
@@ -10,42 +14,17 @@ const CatalogoPage = () => {
                 </aside>
 
                 <div className="w-full md:w-[80%] order-0 md:order-1 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-fit mb-16 md:mb-0">
-                    <Link to="/Catalogo/cojin1">
-                        <div className="flex flex-col h-fit bg-[#eee] w-full rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-                            <img className="rounded-lg size-64" src="cojin-1.jpg" alt="Cojin 1 - GeniaArte" />
-                            <div>
-                                <p className="text-lg font-semibold">Llavero Cojín</p>
-                                <span className="text-md font-medium text-[#58684f]">$50.00</span>
-                            </div>
+                    {products?.map(({ _id, name, price, imageUrl, url }) => (
+                        <div key={_id} className="flex flex-col h-fit bg-[#eee] w-full rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <Link className="flex flex-col items-center p-4" to={`/Catalogo/${url}`}>
+                                <img className="rounded-lg size-64 object-cover mb-1" src={imageUrl} alt={name} />
+                                <div className="w-full">
+                                    <p className="text-lg font-semibold">{name}</p>
+                                    <span className="text-md font-medium text-[#58684f]">${price}.00</span>
+                                </div>
+                            </Link>
                         </div>
-                    </Link>
-                    <Link to="/Catalogo/cojin1">
-                        <div className="flex flex-col h-fit bg-[#eee] w-full rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-                            <img className="rounded-lg size-64" src="cojin-2.jpg" alt="Cojin 1 - GeniaArte" />
-                            <div>
-                                <p className="text-lg font-semibold">Llavero Cojín</p>
-                                <span className="text-md font-medium text-[#58684f]">$50.00</span>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to="/Catalogo/cojin1">
-                        <div className="flex flex-col h-fit bg-[#eee] w-full rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-                            <img className="rounded-lg size-64" src="cojin-3.jpg" alt="Cojin 1 - GeniaArte" />
-                            <div>
-                                <p className="text-lg font-semibold">Llavero Cojín</p>
-                                <span className="text-md font-medium text-[#58684f]">$50.00</span>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to="/Catalogo/cojin1">
-                        <div className="flex flex-col h-fit bg-[#eee] w-full rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
-                            <img className="rounded-lg size-64" src="cojin-4.jpg" alt="Cojin 1 - GeniaArte" />
-                            <div>
-                                <p className="text-lg font-semibold">Llavero Cojín</p>
-                                <span className="text-md font-medium text-[#58684f]">$50.00</span>
-                            </div>
-                        </div>
-                    </Link>
+                    ))}
                 </div>
             </div>
         </section>
