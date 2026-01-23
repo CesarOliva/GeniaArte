@@ -18,8 +18,8 @@ const Footer = () => {
                     <span className="text-lg">® GeniaArte 2026</span>
                     <ul className="flex font-medium gap-x-4 text-lg">
                         <Link to={'/'} className="cursor-pointer hover:text-[#58684f]">INICIO</Link>
-                        <Link to={'/Catalogo'} className="cursor-pointer hover:text-[#58684f]">CATALOGO</Link>
-                        <Link to={'/Contacto'} className="cursor-pointer hover:text-[#58684f]">CONTACTO</Link>
+                        <Link to={'/catalogo'} className="cursor-pointer hover:text-[#58684f]">CATALOGO</Link>
+                        <Link to={'/contacto'} className="cursor-pointer hover:text-[#58684f]">CONTACTO</Link>
                     </ul>
                     <h4 className="text-black text-lg">Una web de <span className="font-semibold cursor-pointer"><a target="_blank" href="https://bycesaroliva.com/">César Oliva</a></span></h4>
                 </div>

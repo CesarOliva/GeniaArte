@@ -37,7 +37,7 @@ const ProductoPage = () => {
         <section className="flex flex-col items-center justify-center mt-8 mb-16">
             <div className="w-[90%] flex flex-col md:flex-row justify-center items-center max-w-300 gap-y-8">
                 <div className="w-full md:w-1/2 flex justify-center">
-                    <img className="rounded-lg size-96 md:size-128" src={product.imageUrl} alt={product.name}/>
+                    <img className="rounded-lg object-cover size-96 md:size-128" src={product.imageUrl} alt={product.name}/>
                 </div>
                 <div className="w-full md:w-1/2 md:ml-4">
                     <h2 className="text-[30px] font-semibold mb-2">{product.name}</h2>
@@ -52,7 +52,7 @@ const ProductoPage = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     {products?.map(({ _id, name, price, imageUrl, url }) => (
                         <div key={_id} className="flex flex-col h-fit bg-[#eee] w-full rounded-lg">
-                            <Link className="p-4" to={`/Catalogo/${url}`}>
+                            <Link className="p-4" to={`/catalogo/${url}`}>
                                 <img className="rounded-lg size-64 object-cover mb-1" src={imageUrl} alt={name} />
                                 <div>
                                     <p className="text-lg font-semibold">{name}</p>

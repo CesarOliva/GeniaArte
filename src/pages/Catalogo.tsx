@@ -16,7 +16,7 @@ const CatalogoPage = () => {
                 <div className="w-full md:w-[80%] order-0 md:order-1 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-fit mb-16 md:mb-0">
                     {products?.map(({ _id, name, price, imageUrl, url }) => (
                         <div key={_id} className="flex flex-col h-fit bg-[#eee] w-full rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                            <Link className="flex flex-col items-center p-4" to={`/Catalogo/${url}`}>
+                            <Link className="flex flex-col items-center p-4" to={`/catalogo/${url}`}>
                                 <img className="rounded-lg size-64 object-cover mb-1" src={imageUrl} alt={name} />
                                 <div className="w-full">
                                     <p className="text-lg font-semibold">{name}</p>

@@ -17,8 +17,8 @@ const Navbar = () => {
 
                 <ul className="hidden sm:flex font-semibold gap-x-8 text-lg">
                     <Link to={'/'} className="cursor-pointer hover:text-[#58684f]">INICIO</Link>
-                    <Link to={'/Catalogo'} className="cursor-pointer hover:text-[#58684f]">CATALOGO</Link>
-                    <Link to={'/Contacto'} className="cursor-pointer hover:text-[#58684f]">CONTACTO</Link>
+                    <Link to={'/catalogo'} className="cursor-pointer hover:text-[#58684f]">CATALOGO</Link>
+                    <Link to={'/contacto'} className="cursor-pointer hover:text-[#58684f]">CONTACTO</Link>
                 </ul>
                 
                 <div className="flex gap-8">
@@ -34,8 +34,8 @@ const Navbar = () => {
                 <div className="sm:hidden mt-2">
                     <ul className="flex flex-col gap-y-3 font-semibold text-lg py-2 text-center">
                         <Link to={'/'} className="cursor-pointer hover:text-[#58684f]">INICIO</Link>
-                        <Link to={'/Catalogo'} className="cursor-pointer hover:text-[#58684f]">CATALOGO</Link>
-                        <Link to={'/Contacto'} className="cursor-pointer hover:text-[#58684f]">CONTACTO</Link>
+                        <Link to={'/catalogo'} className="cursor-pointer hover:text-[#58684f]">CATALOGO</Link>
+                        <Link to={'/contacto'} className="cursor-pointer hover:text-[#58684f]">CONTACTO</Link>
                     </ul>
                 </div>
             )}

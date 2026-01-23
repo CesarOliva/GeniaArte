@@ -15,7 +15,7 @@ const Productos = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     {products?.map(({ _id, name, price, imageUrl, url }) => (
                         <div key={_id} className="flex flex-col h-fit bg-[#eee] w-full rounded-lg">
-                            <Link className="p-4" to={`/Catalogo/${url}`}>
+                            <Link className="p-4" to={`/catalogo/${url}`}>
                                 <img className="rounded-lg size-64 object-cover mb-1" src={imageUrl} alt={name} />
                                 <div>
                                     <p className="text-lg font-semibold">{name}</p>

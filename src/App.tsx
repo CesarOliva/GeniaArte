@@ -12,9 +12,9 @@ function App() {
     <Routes>
       <Route element={<Layout/>}>
         <Route path="/" element={<HomePage/>}/>     
-        <Route path="/Catalogo" element={<CatalogoPage/>}/>
-        <Route path="/Catalogo/:producto" element={<ProductoPage/>}/>
-        <Route path="/Contacto" element={<ContactPage/>}/>
+        <Route path="/catalogo" element={<CatalogoPage/>}/>
+        <Route path="/catalogo/:producto" element={<ProductoPage/>}/>
+        <Route path="/contacto" element={<ContactPage/>}/>
         <Route path="/admin" element={<AdminPage/>}/>     
 
         <Route path="*" element={<NotFoundPage />} />
