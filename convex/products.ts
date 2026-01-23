@@ -1,6 +1,16 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
+export const getAdmin = query({
+    args: {},
+    handler: async (ctx) => {
+        const admin = await ctx.db
+            .query("admins").unique()
+
+        return admin;
+    },
+})
+
 export const createProduct = mutation({
     args: {
         name: v.string(),

@@ -1,9 +1,10 @@
-import { Search } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { logout, user } = useAuth();
 
     return (
         <header className="p-4">
@@ -22,12 +23,18 @@ const Navbar = () => {
                 </ul>
                 
                 <div className="flex gap-8">
-                    <a target="_blank" href="#">
-                        <img className='size-8' src="/facebook.svg" alt="Facebook GeniaArte"/>
-                    </a>
-                    <a target="_blank" href="#">
-                        <img className='size-8' src="/instagram.svg" alt="Instagram GeniaArte"/>
-                    </a>
+                    {!user ? (
+                        <>
+                            <a target="_blank" href="#">
+                                <img className='size-8' src="/facebook.svg" alt="Facebook GeniaArte"/>
+                            </a>
+                            <a target="_blank" href="#">
+                                <img className='size-8' src="/instagram.svg" alt="Instagram GeniaArte"/>
+                            </a>
+                        </>
+                    ): (
+                        <button className="text-lg font-semibold cursor-pointer hover:text-[#58684f] hover:underline" onClick={logout}>Cerrar Sesión</button>
+                    )}
                 </div>
             </nav>
             {isOpen && (

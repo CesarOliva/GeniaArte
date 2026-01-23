@@ -11,4 +11,9 @@ export default defineSchema({
         onStock: v.boolean(),
     })
     .index("by_url", ["url"]),
+
+    admins: defineTable({
+        email: v.string(),
+    })
+    .index("by_email", ["email"]),
 });
