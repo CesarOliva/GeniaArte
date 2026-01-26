@@ -15,6 +15,7 @@ interface AuthContextType {
     user: User | null;
     login: (token: string) => void;
     logout: () => void;
+    loading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -23,12 +24,14 @@ export function AuthProvider({children}: {children: React.ReactNode}) {
     const admin = useQuery(api.products.getAdmin);
 
     const [user, setUser] = useState<User | null>(null);
+    const [loading, setIsLoading] = useState(true);
 
     useEffect(()=> {
         const token = localStorage.getItem("google_token")
         if(token){
             setUser(jwtDecode(token))
         }
+        setIsLoading(false);
     }, []);
 
     const login = (token: string) => {
@@ -51,7 +54,7 @@ export function AuthProvider({children}: {children: React.ReactNode}) {
     }
 
     return(
-        <AuthContext.Provider value={{user, login, logout}}>
+        <AuthContext.Provider value={{user, login, logout, loading}}>
             {children}
         </AuthContext.Provider>
     )

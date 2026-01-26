@@ -69,3 +69,20 @@ export const getRecentProducts = query({
         return products
     }
 })
+
+export const getProductsStats = query({
+    args: {},
+    handler: async(ctx) => {
+        const products = await ctx.db.query("products").collect();
+        
+        const totalProducts = products.length;
+        const inStock = products.filter(p => p.onStock).length;
+        const outOfStock = products.filter(p => !p.onStock).length;
+
+        return {
+            totalProducts,
+            inStock,
+            outOfStock
+        }
+    }
+})
